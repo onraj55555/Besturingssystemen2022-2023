@@ -1,0 +1,12 @@
+Uitschrijven naar stderr: echo "Fout" >&2
+Stuur fouten door naar gebufferd kanaal en good uitvoer weg + aantal fouten tellen: du /etc 2>&1 >/dev/null|wc -l
+n-de lijn van een bestand: head -n 18 BESTAND | tail -n 1
+
+Enter in windows: \r\n, 1) zet pointer naar begin, 2) spring naar volgende
+printf "abcd\refgh": efgh
+
+Bestand van windows omzetten naar linux: do2unix, haalt \r weg, voor ubuntu: fromdos en todos
+OF
+tr van translate: tr -d $'\r' < script.sh > temp SCHRIJVEN NAAR TIJDELIJK BESTAND
+                  mv temp script.sh
+tr kan je ook mengen met a-z en A-Z dingen
