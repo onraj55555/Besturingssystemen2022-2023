@@ -61,14 +61,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Weetjes.md",
+                "file": "Labo's.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -195,12 +195,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "daf13bbc3b63c682",
+  "active": "35f4713ab44d29c1",
   "lastOpenFiles": [
+    "Weetjes.md",
+    "Labo's.md",
     "Les 7.md",
     "Commands werkcolleges.md",
-    "Labo's.md",
-    "Weetjes.md",
     "Threads.md",
     "Untitled 1.md",
     "Untitled.md"

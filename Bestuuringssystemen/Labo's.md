@@ -279,3 +279,37 @@ while ((tel < 100)); do
 	echo $tel
 	((tel++))
 done
+```
+
+## Labo 9
+Oef 103
+Lijst processen
+```BASH
+ps -e
+```
+Proces killen
+```BASH
+kill pid
+
+kill -L: geeft opties om te killen
+signaal 9 en 19 kan je niet negeren, 9 zal altijd "Killed" zeggen
+signaal 17: kind laat weten aan parent dat deze klaar is
+
+vb:
+kill -15 106675
+
+---------------
+pkill -nummer naam
+
+```
+Terminal sluiten maar toch proces laten lopen
+```BASH
+nohup cmdhier
+vb:
+nohup tar cvzf tarbestand /usr /etc /var
+```
+
+Bij numerieke controles mogen er spaties staan, bij andere ( \[\[ \]\] ) MOET ER OVERAL EEN SPATIE STAAN
+Uniek maken van een lijst van strings: hashmap met sleutels: strings
+
+xargs zal standaard echo uitvoeren denk ik
