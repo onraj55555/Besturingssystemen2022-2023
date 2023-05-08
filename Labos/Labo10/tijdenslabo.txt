@@ -1,0 +1,1 @@
+int n=read(1, buffer, BUFSIZ): n zal aantal ingelezen bytes zijn, 0 indoen EOF, -1 indien fout
