@@ -66,9 +66,41 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9430ebd1c6ea99ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Memory Management.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "669f10902ee879c3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "809837ce1bdb22d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arrays in nD.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -113,6 +145,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "45a21eaa442f3d65",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -134,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Labo's.md",
+                "file": "Arrays in nD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Labo's.md",
+                "file": "Arrays in nD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Labo's.md"
+                "file": "Arrays in nD.md"
               }
             }
           }
@@ -195,10 +235,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "35f4713ab44d29c1",
+  "active": "809837ce1bdb22d6",
   "lastOpenFiles": [
-    "Weetjes.md",
+    "Arrays in nD.md",
+    "Memory Management.md",
     "Labo's.md",
+    "Weetjes.md",
     "Les 7.md",
     "Commands werkcolleges.md",
     "Threads.md",
