@@ -1,0 +1,8 @@
+Doe:
+du /etc
+du /var > tmp.txt
+du /etc 1> tmp.txt
+du /var >> tmp.txt
+du /etc 1>> tmp.txt
+> tmp.txt du /etc
+du /var > tmp1.txt > tmp2.txt

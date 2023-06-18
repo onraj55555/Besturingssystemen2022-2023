@@ -1,0 +1,191 @@
+BASH
+
+----------Variabelen----------
+---Build in vars---
+
+$0: naam script
+$1 - $9: 1e 9 argumenten achter script, indien verder: tussen " "
+$#: aantal argumenten meegegeven
+$@: alle argumenten meegegeven, handig voor forlus
+$?: exitstatus laatste process
+$$: PID of huidig script
+$USER: username of persoon die script runt
+$HOSTNAME: hostname of machine waarop script runt
+$SECONDS: tijd sinds script gestart [s]
+$RANDOM: spreekt voorzich
+$LINENO: geeft huidige lijn terug in bashscript, handig voor errordetectie?
+$IFS: geeft Internal Field Seperators, opgelet tussen " " zetten
+
+---Declaratie en initializatie---
+naam=value, GEEN SPATIES
+Indien spatie: tussen " "
+
+---Extra---
+export var: maakt de variabele bereikbaar voor het kindproces
+
+---Gebruiken---
+Derefereren m.b.v. $
+
+----------Commands----------
+---Command substitution---
+HAAKJES GEBRUIKEN
+variable=$(cmd1 | cmd2 ...)
+
+----------Input----------
+read varname
+Leest bijna alles in, doet moeilijk over \ en splitst op IFS, opgelet, zal alles in laatste var steken als er meer te lezen is dan vars gegeven, dus indien 1 var zal er niet gesplitst worden op spaties
+
+---Meer vart inlezen---
+read var1 var2 ..., gesplitst op IFS
+IFS=delim read var1 var2 ...: zal tijdelijk IFS op delim zetten en lezen, handig om csv en passwd te parsen
+
+---Flags---
+-p prompt: prompt msg, vb: read -p 'Name: ' name
+-s: echo de inout niet, gebruikt voor wachtwoorden, vb: read -sp 'Password: ' password
+-d delim: delimiter i.p.v. IFS
+Meer te vinden in read --help (NIET man read, dees geeft read van unistd.h)
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!HOE READ VAN FILES, NOG ONDERZOEKEN
+
+----------Lezen van files----------
+Gebruik cut voorlopig
+cut [flags] file
+
+---Flags---
+-dDELIM, er direct tegen plakken, vb: cut -d':' /etc/passwd
+-f field1,field2,...: splitsen en enkel die fields lezen, gesplitst op DELIM, standaard op IFS?
+
+----------Sorteren----------
+sort [flags] [FILE]
+
+----------Arithmetic----------
+let var=expression of let "a = expression", vb: let a=5+9, NOT THE WAY TO GO
+var=$((expression)), vb random getal tussen 0 en 10: a=$(($RANDOM % 11))
+++, --, +=, -=, *=, /= operatoren werken (hoop ik)
+
+---Lengte var---
+${#var}, NIET DEREFEREREN
+
+----------Controlestructuren---------- DOE MET MANIER VAN WIM, ANDERS WORDT HIJ BOOSJES
+Beter met de prof zijn notas
+if [ test ];then
+	cmd1
+	cmd2
+	...
+fi
+
+OF
+
+if[ test ]
+then
+	cmd1
+	cmd2
+	...
+fi
+
+---Testen---
+Meer te vinden in: man test
+
+!EXPRESSION: EXPRESSION false
+-n STRING: lengte STRING > 0
+-z STRING: lengte STRING == 0
+STRING1 = STRING2: NIE DOEN
+STRING1 != STRING2: NIE DOEN
+INT1 -eq INT2: NIE DOEN
+INT1 -gt INT2: NIE DOEN
+INT1 -lt INT2: NIE DOEN
+-d FILE: FILE bestaat en is een directory
+-e FILE: FILE bestaat
+-r FILE: FILE bestaat en read permission is gegeven
+-s FILE: FILE bestaat en size > 0
+-w FILE: FILE bestaat en schrijven is toegestaan
+-x FILE: FILE bsetaat en mag uitgevoerd worden
+
+--Else---
+if [ test ];then
+	cmds
+else
+	andere cmds
+fi
+
+---Elif---
+if [ test1 ];then
+	cmds
+elif [ test2 ];then
+	andere cmds
+else
+	laatste cmds
+fi
+
+---Boolean operators---
+Indien je meerdere testen wilt
+if [ test1 ] && [ test2 ] && ..., zelfde met ||
+Kan ook met commandos gedaan worden: cmd1 && cmd2 && ... of cmd1 || cmd2 || ... of mengeling
+
+---Switch---
+case var in
+pattern1)
+	cmds
+	;;
+pattern2)
+	cmds
+	;;
+esac
+
+----------Loops----------
+---While---
+while [ test ];do
+	cmds
+done
+
+OF
+
+while [ test ]
+do
+	cmds
+done
+
+---For---
+for var in list
+do
+	cmds
+done
+
+list kan vanalles zijn:
+string variabele gesplitst op IFS, vb: for name in "An Klaas Pieter";do
+een range: {start..stop[..step]}, vb: for value in {1..5}, for value in {1..10..2}
+
+---Controlleren van loops---
+break: uit loop springen
+continue: stop de huidige iteratie en spring naar de volgende
+
+----------Functies----------
+fname () {
+	...
+}
+
+of
+
+function fname {
+	...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
